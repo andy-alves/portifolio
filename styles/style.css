@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;500&display=swap');
+
 :root {
     --azul-claro:#00c3ff;
     --azul-medio:#2a86b8;
     --azul-escuro:#081022;
+    --font-principal: 'Raleway', sans-serif;
 }
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;500&display=swap');
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--font-principal);
     font-size: 1rem;
     font-weight: 200;
     color: #ffffff;
@@ -20,7 +22,7 @@ nav{
     align-items: flex-end;
     position: -webkit-sticky;
     position: sticky;
-    top: -2.5rem;
+    top: -2rem;
     background-color:var(--azul-escuro);
 }
 .menu {
