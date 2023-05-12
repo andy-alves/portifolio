@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;500&display=swap');
 
 :root {
+    --branco: #ffffff;
+    --preto: #000000;
     --azul-claro:#00c3ff;
     --azul-medio:#2a86b8;
     --azul-escuro:#081022;
@@ -11,10 +13,10 @@ body {
     font-family: var(--font-principal);
     font-size: 1rem;
     font-weight: 200;
-    color: #ffffff;
+    color:var(--branco);
     background-color: var(--azul-escuro);
 }
-nav{
+nav {
     height: 4.8rem;
     padding-bottom:0.5rem;
     display: flex;
@@ -25,21 +27,24 @@ nav{
     top: -2rem;
     background-color:var(--azul-escuro);
 }
-.menu {
-    border-bottom: 0.1rem solid #ffffff;
-    display: flex;
-}
 .menu a {
     margin: 0 1.5rem;
     text-decoration: none;
-    color: #ffffff;
+    color: var(--branco);
     font-weight: 500;
     line-height: 1.5rem;
     font-size: 1.5rem;
+    position: relative;
+}
+.menu a::after {
+    content: " ";
+    width: 100%;
+    height: 1rem;
 }
 .menu a:hover {
     color: var(--azul-claro);
-    transition: 0.7s;
+    transition: 1s;
+    border-bottom: 0.1rem solid var(--azul-claro);
 }
 .main-container-escuro {
     padding: 0 3rem;
