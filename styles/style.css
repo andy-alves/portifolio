@@ -18,7 +18,6 @@ body {
 }
 nav {
     height: 4.8rem;
-    padding-bottom:0.5rem;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -27,40 +26,54 @@ nav {
     top: -2rem;
     background-color:var(--azul-escuro);
 }
+.menu {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem 0;
+}
 .menu a {
-    margin: 0 1.5rem;
     text-decoration: none;
     color: var(--branco);
     font-weight: 500;
     line-height: 1.5rem;
     font-size: 1.5rem;
+    height: 2rem;
     position: relative;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 .menu a::after {
     content: " ";
-    width: 100%;
-    height: 1rem;
+    width: 0%;
+    height: 0.2rem;
+    background-color: var(--azul-claro);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.7s;
 }
 .menu a:hover {
     color: var(--azul-claro);
-    transition: 1s;
-    border-bottom: 0.1rem solid var(--azul-claro);
+    transition: 0.7s;
 }
-.main-container-escuro {
-    padding: 0 3rem;
-    background-color: var(--azul-escuro);
+.menu a:hover::after{
+    transform: translateX(-50%) scaleX(1);
+    width: 100%;
 }
-.main-container-claro {
-    padding: 0 3rem;
-    background-color: var(--azul-medio);
+.main-container {
+    padding: 2rem;
+    text-align: center;
 }
 #section-1 {
-    height: 45rem;
+    min-height: 80vh;
     display: flex;
+    flex-wrap: wrap;
 }
 .sobre-mim {
     display: flex;
-    align-items: center;
     margin: auto;
     max-width: 1200px;
 }
@@ -87,30 +100,41 @@ nav {
 }
 .social-media{
     display: flex;
+    height: 32px;
 }
 .social-media p {
     margin-right: 3rem;
 }
 .social-media a {
-    margin: 0 0.3rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    width: 2rem;
+    text-align: center;
+}
+.social-media img {
+    width: 1.5rem;
+}
+.social-media img:hover {
+    transform: scale(1.4);
+    transition: 0.4s;
 }
 #imagem-de-perfil {
     border-radius: 50%;
     border: 0.1rem solid var(--azul-claro);
-    width: 60%;
+    width: 25rem;
 }
 
 /* habilidades section-2 */
+
+#section-2 {
+    text-align: center;
+}
 h2 {
     font-size: 2rem;
     line-height: 2rem;
     font-weight: 500;
     padding: 2rem 0;
     margin: 0 auto;
-}
-#section-2 {
-    height: 35rem;
-    text-align: center;
 }
 .habilidades {
     align-items: center;
@@ -119,27 +143,46 @@ h2 {
 }
 .box-habilidades {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     margin-top: 2.5rem;
 }
-.habilidades-logo  {
-    text-align: center;
+.habilidades-cards {
+    background-color: var(--azul-medio);
+    width: 8rem;
+    height: 9rem;
+    padding: 0.5rem;
+    margin: 2rem 1rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.habilidades-logo p {
-    font-size: 1.5rem;
+.habilidades-cards:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.4s;
+}
+.habilidades-cards p {
+    font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+.habilidades-cards img {
+    width: 4rem;
 }
 
 /* habilidades section-3 */
 
 #section-3 {
     text-align: center;
-    height: 35rem;
 }
 .box-portifolio {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
     margin-top: 2.5rem;
 }
 .box-job {
@@ -147,11 +190,29 @@ h2 {
     color: var(--azul-escuro);
     font-size: 2rem;
     font-weight: 500;
-    width: 20rem;
-    height: 20rem;
+    border-radius: 0.6rem;
+    position: relative;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+.box-job:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
+}
+.box-job img {
+    width: 25rem;
+    height: 16rem;
+    border-radius: 0.5rem;
 }
 footer {
     background-color: var(--azul-medio);
     width: auto;
-    height: 2rem;
+}
+.texto-footer {
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
