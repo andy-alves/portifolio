@@ -31,6 +31,7 @@ nav {
     position: sticky;
     top: -2rem;
     background-color:var(--azul-escuro);
+    z-index: 2; /*Z-INDEX 1  no box de cada portifolio(.box-job) */
 }
 .menu {
     width: 600px;
@@ -199,7 +200,7 @@ h2 {
     border-radius: 0.6rem;
     position: relative;
     cursor: pointer;
-    margin: 0.5rem;
+    margin: 1.5rem 0.5rem;
     width: 25rem;
     height: 16rem;
     border-radius: 0.5rem;
@@ -207,6 +208,7 @@ h2 {
 .box-job:hover {
     transform: scale(1.2);
     transition: 0.4s;
+    z-index: 1;
 }
 .box-job::before{
     content: "Clique para saber mais";
