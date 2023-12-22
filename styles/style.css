@@ -77,6 +77,9 @@ nav {
 #section-1 {
     min-height: 80vh;
     display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    display: flex; 
     flex-wrap: wrap;
 }
 .sobre-mim {
@@ -135,7 +138,7 @@ nav {
 #imagem-de-perfil {
     border-radius: 50%;
     border: 0.1rem solid var(--azul-claro);
-    width: 25rem;
+    width: 50%;
 }
 
 /* habilidades section-2 */
@@ -255,4 +258,46 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;    
+}
+/* mobile */
+@media (max-width: 1200px) {
+    .sobre-mim {
+        flex-direction: column;
+        align-items: center;
+    }
+    #imagem-de-perfil {
+        width: 40%;
+        margin-top: 3rem;
+    }
+}
+@media (max-width: 800px) {
+    #imagem-de-perfil {
+        width: 50%;
+        margin-top: 3rem;
+    }
+    .habilidades-cards {
+        width: 6rem;
+        height: 7rem;
+    }
+    .habilidades-cards p {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+    }
+    .habilidades-cards img {
+        width: 4rem;
+    }
+}
+@media (max-width: 550px) {
+    .menu {
+        margin: 0 1rem;
+    }
+    .menu a {
+        font-size: 1.1rem;
+        padding: 0.5rem;
+    }
+    #imagem-de-perfil {
+        width: 70%;
+        margin-top: 5rem;
+    }
 }
