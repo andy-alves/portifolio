@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;500&display=swap');
 
 :root {
-    --branco: #ffffff;
+    --branco: #fcfcfc;
     --preto: #000000;
     --azul-claro:#00c3ff;
     --azul-medio:#2a86b8;
@@ -29,8 +29,8 @@ nav {
     align-items: flex-end;
     position: -webkit-sticky;
     position: sticky;
-    top: -2rem;
-    background-color:var(--azul-escuro);
+    top: -1.2rem;
+    background-color:var(--azul-medio);
     z-index: 2; /*Z-INDEX 1  no box de cada portifolio(.box-job) */
 }
 .menu {
@@ -70,27 +70,67 @@ nav {
     transform: translateX(-50%) scaleX(1);
     width: 100%;
 }
+#dark-mode-bg {
+    display: flex;
+    justify-content: flex-end;
+}
+#dark-mode {
+    background-color:var(--branco);
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 25px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+#sun {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: 0px;
+    opacity: 1;
+    cursor: pointer;
+}
+#moon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 15px;
+    opacity: 0;
+    cursor: pointer;
+}
+#dark-mask {
+    background-color: var(--azul-escuro);
+    border-radius: 25px;
+    width: 4rem;
+    height: 2.5rem;
+    position: relative;
+    right: 63px;
+    box-sizing: border-box;
+}
+/* section */
 .main-container {
     padding: 2rem;
     text-align: center;
 }
 #section-1 {
-    min-height: 80vh;
-    display: flex;
-    display: flex;
-    flex-wrap: wrap;
-    display: flex; 
-    flex-wrap: wrap;
+    min-height: 60vh;
+    margin-top: 5rem;
 }
 .sobre-mim {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: auto;
     max-width: 1200px;
 }
 .info-perfil {
     font-size: 1.2rem;
     line-height: 1.5rem;
-    font-weight: 200;
+    font-weight: 400;
     text-align: left;
 }
 .info-perfil h1 {
@@ -107,17 +147,25 @@ nav {
 }
 #interesse {
     margin: 0 1rem 1rem 0;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    max-width: 700px;
 }
 #curriculo {
-    color:var(--azul-claro);
+    color:var(--branco);
     text-decoration: none;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 400;
+    background-color: var(--azul-medio);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 5px 10px; 
 }
 .social-media{
     margin-top: 5rem;
     display: flex;
     height: 32px;
+    font-weight: 400;
 }
 .social-media p {
     margin-right: 3rem;
@@ -136,9 +184,7 @@ nav {
     transition: 0.4s;
 }
 #imagem-de-perfil {
-    border-radius: 50%;
-    border: 0.1rem solid var(--azul-claro);
-    width: 50%;
+    border-radius: 20%;
 }
 
 /* habilidades section-2 */
